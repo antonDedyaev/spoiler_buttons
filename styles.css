@@ -1,0 +1,139 @@
+:root {
+    --white: #fff;
+    --black: #020F20;
+    --blue: #3877EE;
+    --green: #6ABF4B;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    cursor: url('./images/cursor.svg'), auto;
+}
+
+.buttonBlock {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.buttonBlock:before {
+    content: '';
+    background-image: url('./images/bgrnd-image.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+}
+
+.spoilerButton {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+}
+
+.spoilerButton__content {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: none;
+    align-items: center;
+
+    padding: 11px 15px;
+    gap: 15px;
+
+    border-radius: 40px;
+
+    color: var(--white);
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.spoilerButton__content_green {
+    border: 1px solid var(--green);
+    background: var(--green);
+}
+
+.spoilerButton__content_blue {
+    border: 1px solid var(--blue);
+    background:  var(--blue);
+}
+
+.spoilerButton__collapsedImage {
+    display: block;
+}
+
+.spoilerButton_expanded .spoilerButton__collapsedImage {
+    display: none;
+}
+.spoilerButton_expanded .spoilerButton__content {
+    display: flex;
+}
+
+.spoilerButton_first {
+    left: calc((446 / 1920) * 100%);
+    bottom: calc((325 / 1080) * 100%);
+}
+
+.spoilerButton_second {
+    left: calc((687 / 1920) * 100%);
+    bottom: calc((557 / 1080) * 100%);
+}
+
+.spoilerButton_third {
+    left: calc((1148 / 1920) * 100%);
+    bottom: calc((635 / 1080) * 100%);
+}
+
+.spoilerButton_fourth {
+    left: calc((1107 / 1920) * 100%);
+    bottom: calc((249 / 1080) * 100%);
+}
+
+.spoilerButton_fifth {
+    left: calc((1306 / 1920) * 100%);
+    bottom: calc((370 / 1080) * 100%);
+}
+
+.spoilerButton_sixth {
+    left: calc((580 / 1920) * 100%);
+    bottom: calc((757 / 1080) * 100%);
+}
+
+.spoilerButton_seventh {
+    left: calc((1081 / 1920) * 100%);
+    bottom: calc((410 / 1080) * 100%);
+}
+
+.spoilerButton_eighth {
+    left: calc((1414 / 1920) * 100%);
+    bottom: calc((564 / 1080) * 100%);
+}
+
+.spoilerButton_ninth {
+    left: calc((1373 / 1920) * 100%);
+    bottom: calc((814 / 1080) * 100%);
+}
+
+.spoilerButton_tenth {
+    left: calc((1593 / 1920) * 100%);
+    bottom: calc((326 / 1080) * 100%);
+}

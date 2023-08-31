@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Spoiler Buttons</title>
+</head>
+<body>
+    <div class="buttonBlock">
+        <div class="buttons">
+            <button class="spoilerButton spoilerButton_first">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка">      
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Мост</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_second">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-green.svg" alt="Зеленая кнопка">
+                <div class="spoilerButton__content spoilerButton__content_green">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Стадион</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_third">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-green.svg" alt="Зеленая кнопка">
+                <div class="spoilerButton__content spoilerButton__content_green">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Ресторан</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_fourth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-green.svg" alt="Зеленая кнопка">
+                <div class="spoilerButton__content spoilerButton__content_green">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Гостиница</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_fifth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-green.svg" alt="Зеленая кнопка">
+                <div class="spoilerButton__content spoilerButton__content_green">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Деловой центр</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_sixth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка" />
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Вокзал</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_seventh">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка" />
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Фудкорт</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_eighth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка" />
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Администрация</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_ninth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка" />
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Жилой дом</span>
+                </div>
+            </button>
+            <button class="spoilerButton spoilerButton_tenth">
+                <img class="spoilerButton__collapsedImage" src="./images/btn-blue.svg" alt="Синяя кнопка" />
+                <div class="spoilerButton__content spoilerButton__content_blue">
+                    <img src="./images/minus.svg" alt="Знак минус">
+                    <span>Деловой центр (2-й корпус)</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('.buttonBlock')
+
+        btn.addEventListener('click', e => {
+            if (e.target.classList.contains('buttonBlock')) {
+                const allExpandedButtons = document.querySelectorAll('.spoilerButton_expanded');
+                allExpandedButtons.forEach((button) => button.classList.remove('spoilerButton_expanded'));
+                return;
+            } else if (e.target.parentElement.classList.contains('spoilerButton__content')) {
+                e.target.parentElement.parentElement.classList.toggle('spoilerButton_expanded');
+            }
+            e.target.parentElement.classList.toggle('spoilerButton_expanded');
+        })
+    </script>
+</body>
+</html>
